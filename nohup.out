@@ -1,0 +1,660 @@
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+/home/ftl3370/R2E-Gym/.venv/lib/python3.12/site-packages/swebench/harness/modal_eval/run_evaluation_modal.py:302: DeprecationError: 2025-02-03: Modal will stop implicitly adding local Python modules to the Image ("automounting") in a future update. The following modules need to be explicitly added for future compatibility:
+* r2egym
+* src
+
+e.g.:
+image_with_source = my_image.add_local_python_source("r2egym", "src")
+
+For more information, see https://modal.com/docs/guide/modal-1-0-migration
+  @app.function(
+2025-09-16 08:22:29,693 - httpx - INFO - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+[09/16/25 08:22:30] INFO     Starting    collect_sweverified_trajectories.py:333
+                             SWE-Bench                                          
+                             Verified                                           
+                             trajectory                                         
+                             collection                                         
+                             with                                               
+                             configurati                                        
+                             on:                                                
+                    INFO       traj_dir: collect_sweverified_trajectories.py:335
+                             ./traj                                             
+                    INFO       exp_name: collect_sweverified_trajectories.py:335
+                    INFO       max_worke collect_sweverified_trajectories.py:335
+                             rs: 20                                             
+                    INFO       max_steps collect_sweverified_trajectories.py:335
+                             : 80                                               
+                    INFO       max_steps collect_sweverified_trajectories.py:335
+                             _absolute:                                         
+                             100                                                
+                    INFO       llm_name: collect_sweverified_trajectories.py:335
+                             anthropic/c                                        
+                             laude-4-son                                        
+                             net-2025051                                        
+                             4                                                  
+                    INFO       use_fn_ca collect_sweverified_trajectories.py:335
+                             lling:                                             
+                             False                                              
+                    INFO       temperatu collect_sweverified_trajectories.py:335
+                             re: 0.7                                            
+                    INFO       max_token collect_sweverified_trajectories.py:335
+                             s: 65536                                           
+                    INFO       backend:  collect_sweverified_trajectories.py:335
+                             docker                                             
+                    INFO       max_rewar collect_sweverified_trajectories.py:335
+                             d_calc_time                                        
+                             : 1200                                             
+                    INFO       max_itera collect_sweverified_trajectories.py:335
+                             tions: 1                                           
+                    INFO       scaffold: collect_sweverified_trajectories.py:335
+                             r2egym                                             
+                    INFO       num_resta collect_sweverified_trajectories.py:335
+                             rts: 1                                             
+                    INFO       args_path collect_sweverified_trajectories.py:335
+                             :                                                  
+                    INFO       start_idx collect_sweverified_trajectories.py:335
+                             : 0                                                
+                    INFO       k: 20     collect_sweverified_trajectories.py:335
+                    INFO       dataset:  collect_sweverified_trajectories.py:335
+                             R2E-Gym/SWE                                        
+                             -Bench-Veri                                        
+                             fied                                               
+                    INFO       split:    collect_sweverified_trajectories.py:335
+                             test                                               
+                    INFO     Starting    collect_sweverified_trajectories.py:145
+                             SWE-Bench                                          
+                             Verified                                           
+                             trajectory                                         
+                             collection.                                        
+                             ..                                                 
+                    INFO     Loading     collect_sweverified_trajectories.py:155
+                             R2E-Gym/SWE                                        
+                             -Bench-Veri                                        
+                             fied                                               
+                             dataset...                                         
+[09/16/25 08:22:31] INFO     Loaded 500  collect_sweverified_trajectories.py:159
+                             entries                                            
+                             from                                               
+                             SWE-Bench                                          
+                             Verified                                           
+                             dataset                                            
+[09/16/25 08:22:32] INFO     No existing  collect_sweverified_trajectories.py:72
+                             results file                                       
+                             found at                                           
+                             traj/.jsonl                                        
+                    INFO     Starting     collect_sweverified_trajectories.py:88
+                             with 500                                           
+                             total                                              
+                             entries in                                         
+                             SWE-Bench                                          
+                             Verified                                           
+                             dataset                                            
+                    INFO     After        collect_sweverified_trajectories.py:95
+                             excluding                                          
+                             existing                                           
+                             results: 500                                       
+                             entries                                            
+                             remain                                             
+                    INFO     After       collect_sweverified_trajectories.py:184
+                             applying                                           
+                             k=20: 20                                           
+                             entries                                            
+                    INFO     Final       collect_sweverified_trajectories.py:186
+                             entries to                                         
+                             process: 20                                        
+                    INFO     Starting    collect_sweverified_trajectories.py:236
+                             parallel                                           
+                             processing                                         
+                             with 20                                            
+                             workers...                                         
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-12907',)                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-13033',)                 
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Max Steps: 80                           edit.py:228
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-13236',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-13579',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-13453',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-13398',)                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14309',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14182',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14096',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-13977',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14365',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14539',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14508',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14369',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14598',)                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-14995',)                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-7336',)                  
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-7166',)                  
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-7606',)                  
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+[09/16/25 08:22:32] INFO     Starting editagent on Docker image:     edit.py:226
+                             ('slimshetty_swebench-verified:sweb.eva            
+                             l.x86_64.astropy__astropy-7671',)                  
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Max Steps: 80                           edit.py:228
+                    INFO     Using LLM:                              edit.py:227
+                             anthropic/claude-4-sonnet-20250514                 
+                    INFO     Max Steps: 80                           edit.py:228
+[09/16/25 08:22:36] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14365                    
+                    INFO     Container ID:                         docker.py:174
+                             9b57d40bf07de6f7cd95b7fe6bdc6cfe7f408              
+                             cd7ecea3d0613a19af7f7ede6c1                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14365                        
+[09/16/25 08:22:36] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14096                    
+                    INFO     Container ID:                         docker.py:174
+                             82ae8c27cc7421c198cf934e4ac945c8d4a3f              
+                             83dc466ea9e5f8b118d65a5b195                        
+[09/16/25 08:22:36] ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14365                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14096                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14096                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:36] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-13453                    
+                    INFO     Container ID:                         docker.py:174
+                             9ea91267c3e5a798f37fa5f395526e4196054              
+                             aa4ad736776f4be53320dfadeff                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-13453                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-13453                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:36] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-13033                    
+                    INFO     Container ID:                         docker.py:174
+                             949eeab60e6216b0333194ea2b0ed3664712a              
+                             e2625d74421fd003e6b940f6fbc                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-13033                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-13033                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:36] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14508                    
+                    INFO     Container ID:                         docker.py:174
+                             1ac0b48778842d48a2887d8c80e832ddd7521              
+                             53b58ba9d82497244b818b94ce2                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14508                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14508                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:36] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14369                    
+                    INFO     Container ID:                         docker.py:174
+                             380b4fc0a3b5436fb8a940e9510ba05ada6ca              
+                             3a89e00d1e64586e4c4eb320988                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14369                        
+[09/16/25 08:22:36] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-13977                    
+                    INFO     Container ID:                         docker.py:174
+                             d3f68cc960630d137378510c902775bef49e2              
+                             a9fee8ce6a4979f1e228a4249db                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14369                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-13977                        
+[09/16/25 08:22:37] ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-13977                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:37] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-13236                    
+                    INFO     Container ID:                         docker.py:174
+                             06691e289ee040b9bcd902eb4549a0d4cd2e9              
+                             63d0450692fca440e51bf14f00c                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-13236                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-13236                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:37] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-13398                    
+                    INFO     Container ID:                         docker.py:174
+                             5688c05dbe39423759b5b404fe5ebd08d2e0a              
+                             b4ccc797b8b43c7ab8a77168a9b                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-13398                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-13398                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:37] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14539                    
+                    INFO     Container ID:                         docker.py:174
+                             2b137f60609f53654adc729b6c9bba387116e              
+                             f16f41b489420dd86b7ee0f0b89                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14539                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14539                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-7336                     
+                    INFO     Container ID:                         docker.py:174
+                             aa0ae954da02d8d50c93364b4fca51889d9ce              
+                             54efed9cfdf58ed61d9abdd03e0                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-7336                         
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-7166                     
+[09/16/25 08:22:38] ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-7336:                                        
+                              [Errno 21]                                        
+                             Is a                                               
+                             directory:                                         
+                             '.'                                                
+                    INFO     Container ID:                         docker.py:174
+                             3c0de2b982ff030a31f636d169131ddab3c5d              
+                             590285518138ab07a2e6f592504                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-7166                         
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-7166:                                        
+                              [Errno 21]                                        
+                             Is a                                               
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-7671                     
+                    INFO     Container ID:                         docker.py:174
+                             7cb28caa2962fee872bf076a2b115c42f8d1c              
+                             b1341e12db3408020064c08d7a9                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-7671                         
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-7671:                                        
+                              [Errno 21]                                        
+                             Is a                                               
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14995                    
+                    INFO     Container ID:                         docker.py:174
+                             886c9921e7f4bb84389a4655ab6b7ce43c488              
+                             3594939952122ea017b7f9e3f7a                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14995                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14995                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14309                    
+                    INFO     Container ID:                         docker.py:174
+                             95ccc34f838a00156688ca49ac1b2081bc075              
+                             d895bad2ee77379b890a33e6ff3                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14309                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14309                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14182                    
+                    INFO     Container ID:                         docker.py:174
+                             1252b1ae03245fb3ee083e65f13235ba66df2              
+                             8c85c8aee878f1369b087bf1703                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14182                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14182                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-13579                    
+                    INFO     Container ID:                         docker.py:174
+                             a26c41f1b407087f1631bb6d1743b9e43b9fe              
+                             85414787bb03131efa19023bf71                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-13579                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-13579                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-12907                    
+                    INFO     Container ID:                         docker.py:174
+                             ba7c2e7cb86c0360d8f490e78f1850919c0ae              
+                             ff6e979c173a31f2737bea62657                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-12907                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-12907                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-14598                    
+                    INFO     Container ID:                         docker.py:174
+                             e82b070ee28bf57c4df6dfb1cc91aa6281562              
+                             304a41a44c8fd90f0624738b748                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-14598                        
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-14598                                        
+                             : [Errno                                           
+                             21] Is a                                           
+                             directory:                                         
+                             '.'                                                
+[09/16/25 08:22:38] INFO     Docker environment initialized        docker.py:170
+                    INFO     repo name: astropy/astropy            docker.py:171
+                    INFO     Docker image:                         docker.py:172
+                             slimshetty/swebench-verified:sweb.eva              
+                             l.x86_64.astropy__astropy-7606                     
+                    INFO     Container ID:                         docker.py:174
+                             35bded6d22eedf350227b640d56ba50893c3f              
+                             f7def027066a05d576e95657b2f                        
+                    INFO     Initialized Env: astropy/astropy with     env.py:59
+                             image:                                             
+                             slimshetty/swebench-verified:sweb.eval.x8          
+                             6_64.astropy__astropy-7606                         
+                    ERROR    Exception   collect_sweverified_trajectories.py:278
+                             processing                                         
+                             instance                                           
+                             astropy__as                                        
+                             tropy-7606:                                        
+                              [Errno 21]                                        
+                             Is a                                               
+                             directory:                                         
+                             '.'                                                
+                    INFO     Trajectory  collect_sweverified_trajectories.py:280
+                             collection                                         
+                             completed!                                         
+                    INFO     Successfull collect_sweverified_trajectories.py:281
+                             y                                                  
+                             processed:                                         
+                             0                                                  
+                    INFO     Failed: 20  collect_sweverified_trajectories.py:282
+                    INFO     Results     collect_sweverified_trajectories.py:283
+                             saved to:                                          
+                             traj/.jsonl                                        

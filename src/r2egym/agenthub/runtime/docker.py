@@ -1025,7 +1025,9 @@ class DockerRuntime(ExecutionEnvironment):
         )
         success = get_resolution_status(report) == ResolvedStatus.FULL.value
         if get_test_output:
-            return success, out
+            # return success, out
+            # NOTE: I chagned to integer because the reward is an integer
+            return int(success), out
         return int(success)
 
     def _calculate_reward_r2e(self, get_test_output=False, timeout: int = 300) -> float:
